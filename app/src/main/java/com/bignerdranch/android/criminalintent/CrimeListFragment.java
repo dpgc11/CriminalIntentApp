@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
@@ -49,6 +50,7 @@ public class CrimeListFragment extends Fragment {
         private TextView mDateTextView;
         private CheckBox mSolvedCheckBox;
         private Crime mCrime;
+        private SimpleDateFormat mCrimeDateAndTimeFormat;
 
         public CrimeHolder(View itemView) {
             super(itemView);
@@ -56,12 +58,13 @@ public class CrimeListFragment extends Fragment {
             mTitleTextView = (TextView) itemView.findViewById(R.id.list_item_crime_title_text_view);
             mDateTextView = (TextView) itemView.findViewById(R.id.list_item_crime_date_text_view);
             mSolvedCheckBox = (CheckBox) itemView.findViewById(R.id.list_item_crime_solved_check_box);
+            mCrimeDateAndTimeFormat = new SimpleDateFormat("EEEE, MMM d, KK:mm a, yyyy");
         }
 
         public void bindCrime(Crime crime) {
             mCrime = crime;
             mTitleTextView.setText(mCrime.getTitle());
-            mDateTextView.setText(mCrime.getDate().toString());
+            mDateTextView.setText(mCrimeDateAndTimeFormat.format(mCrime.getDate()).toString());
             mSolvedCheckBox.setChecked(mCrime.isSolved());
         }
 
