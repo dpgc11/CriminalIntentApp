@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-                                        android:id="@+id/crime_recycler_view"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-</android.support.v7.widget.RecyclerView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/crime_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/empty_view"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="No crimes found. Please click the 'Plus' button to add a crime."/>
+</LinearLayout>

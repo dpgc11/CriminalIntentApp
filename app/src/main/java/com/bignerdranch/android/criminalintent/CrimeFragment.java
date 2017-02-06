@@ -145,4 +145,5 @@ public class CrimeFragment extends Fragment {
     private void updateDate(String text) {
         mDateButton.setText(text);
     }
+
 }
