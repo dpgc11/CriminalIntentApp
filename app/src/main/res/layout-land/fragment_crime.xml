@@ -52,18 +52,25 @@
         android:layout_marginRight="16dp">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/crime_suspect"
             android:layout_weight="1"
             android:text="@string/crime_suspect_text"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/crime_report"
             android:layout_weight="1"
             android:text="@string/crime_report_text"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_call_suspect"
+            android:text="Call Suspect"/>
     </LinearLayout>
 
 
